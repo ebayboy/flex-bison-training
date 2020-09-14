@@ -12,9 +12,12 @@ struct key_pair_s {
 STAILQ_HEAD(key_pair_list, key_pair_s);
 
 struct key_pair_list* create_pair_list();
+void free_pair_list(struct key_pair_list *head);
 struct key_pair_s* create_key_value_pair(char* key, char* value);
 uint get_int_value_from_key(struct key_pair_list* head, char* key);
 char* get_str_value_from_key(struct key_pair_list* head, char* key);
 uint get_sigProto_value(struct key_pair_list* head);
 uint get_matchType_value(struct key_pair_list* head);
+
 #endif
+

@@ -5,6 +5,8 @@
 #include "application.h"
 #include "key_pair.h"
 
+int yylex();
+
 void yyerror(char *s)
 {
     printf("ERROR: %s\n", s);
